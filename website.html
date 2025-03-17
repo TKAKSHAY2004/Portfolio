@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Khanna T K - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeInDown 1s ease-in-out;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 4rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-in-out;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sections = document.querySelectorAll("section");
+            let options = {
+                threshold: 0.2
+            };
+            let observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, options);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Akshay Khanna T K</h1>
+        <p>Computer Science and Business Systems Student</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A Computer Science and Business Systems (CSBS) student passionate about technology-driven solutions. Skilled in software development, data analytics, and business strategy.</p>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>BTech in Computer Science and Business Systems</strong><br>SRM Institute of Science and Technology, Chennai, Tamil Nadu<br>CGPA: 8.86 (First 6 Semesters) | Expected May 2026</p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>AIESEC Chennai</strong> - Junior Member, Marketing & Content Creation</li>
+            <li><strong>DSBS Student Association</strong> - Active Member</li>
+            <li><strong>MERN Stack Internship – EY GDS & AICTE</strong> - 6-week internship</li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Python, C, Java, SQL, HTML, CSS, JavaScript, MySQL, PowerBI, NumPy, Pandas, Matplotlib</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Hotel Operations Management Platform</strong> - A Python-based system with MySQL integration.</li>
+            <li><strong>Managing Files and Directories</strong> - GUI-based file manager using Tkinter.</li>
+        </ul>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Python for Data Science (NPTEL) - ELITE</li>
+            <li>Fundamentals of Java Programming (Coursera)</li>
+            <li>DBMS - Master the Fundamentals and Advanced Concepts (Scaler)</li>
+            <li>Object-Oriented Programming in Java (Scaler)</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:akstk2004@gmail.com">akstk2004@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/TKAKSHAY2004" target="_blank">TKAKSHAY2004</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/akshay-khanna-t-k-710786258" target="_blank">Akshay Khanna T K</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Akshay Khanna T K. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
